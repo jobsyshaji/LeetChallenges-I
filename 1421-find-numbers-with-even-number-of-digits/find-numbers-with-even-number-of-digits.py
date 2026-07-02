@@ -1,4 +1,12 @@
 class Solution:
     def findNumbers(self, nums: List[int]) -> int:
-          return sum(int(floor(log10(x))+1)%2==0 for x in nums)
+        res = 0
+        for i in nums:
+            count = 0
+            for j in str(i):
+                count = count+1
+            if count % 2 ==0:
+                res = res+1
+        return res
+        
         
